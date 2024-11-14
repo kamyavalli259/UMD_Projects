@@ -1,0 +1,44 @@
+html{
+    font-family: Arial;
+}
+
+#red_text{
+    color: red;
+}
+
+button{
+    box-shadow: 8px 8px 6px rgba(0,0,0,0.3);
+    border:2px silver solid;
+    border-radius:5px;
+}
+
+img{
+    display:block;
+    margin:0 auto;
+    height:450px;
+    width:700px;
+    object-fit:cover;
+    border:10px double;
+}
+
+body{
+    border:20px groove brown;
+    padding:30px;
+    margin:10px;
+    background-color: white;
+}
+
+h1{
+    color:brown;
+    font-size:200%;
+}
+
+#load_image{
+    width:900px;
+}
+
+#display{
+    width:900px;
+}
+
+

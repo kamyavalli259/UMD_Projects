@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Viewer</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+</head>
+<body>
+    <h1><u>Photo Viewer</u></h1>
+    <img src="InitialImage.jpg" id="img" alt="initial">
+    <fieldset>
+        <legend><b>Status</b></legend>
+        <label>Photo Being Displayed:</label>
+        <input type="text" id="display" value="InitialImage.jpg" disabled>
+        <br>
+
+        <div id="red_text">
+            
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend><b>Loading Images(Local Folder)</b></legend>
+    <form id="Photo_form">
+        
+        <label>Photos Folder:</label>
+        <input type="text" id="folder" value="umcp/">
+        <label>Common Name: </label>
+        <input type="text" id="common" value="college">
+        <br>
+        <br>
+        <label>Start Photo Number: </label>
+        <input type="text" id="photo_number" value="2">
+
+        <label>End Photo Number: </label>
+        <input type="text" id="end_photo_number" value="4">
+        <br>
+
+
+        <button id="Loader" type="submit">
+            Load Photos
+        </button>
+    </form>
+</fieldset>
+
+    <fieldset>
+        <legend><b>Loading Images(JSON File)</b></legend>
+        <label>URL:</label>
+        <input type="text" id="load_image" value="http://www.cs.umd.edu/~nelson/classes/resources/cmsc335/images/imagesSet1.json">
+        <button id="Loader2" type="submit">
+            Load JSON
+        </button>
+    </fieldset>
+
+    <fieldset>
+        <legend><b>Iterating</b></legend>
+        <button id="button1" type="submit">
+            Previous Photo
+        </button>
+        <button id="button2" type="submit">
+            Next Photo
+        </button>
+        <button id="button3" type="submit">
+            First Photo
+        </button>
+        <button id="button4" type="submit">
+            Last Photo
+        </button>
+    </fieldset>
+
+    <fieldset>
+        <legend><b>Slideshows</b></legend>
+        <button id="slideshow1" type="submit">
+            SlideShow
+        </button>
+        <button id="slideshow2" type="submit">
+            RandomSlideShow
+        </button>
+        <button id="slideshow3" type="submit">
+            StopSlideShow
+        </button>
+    </fieldset>
+    <hr>
+   
+    <button id="reset">
+        Reset Form Values
+    </button>
+    
+
+
+
+    <script src="code.js"></script>
+</body>
+</html>
