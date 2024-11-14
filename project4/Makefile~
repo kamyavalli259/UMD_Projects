@@ -1,0 +1,52 @@
+CC = gcc
+CFLAGS = -ansi -Wall -g -O0 -Wwrite-strings -Wshadow \
+	-pedantic-errors -fstack-protector-all -Wextra
+
+PROGS = public01 public02 public03 public04\
+	public05 public06
+all: $(PROGS)
+
+calendar.o: calendar.c event.h calendar.h
+	$(CC) $(CFLAGS) -c calendar.c
+
+public01: public01.o calendar.o
+	$(CC) -o public01 public01.o calendar.o
+
+public01.o: event.h calendar.h
+	$(CC) $(CFLAGS) -c public01.c
+
+public02: public02.o calendar.o
+	$(CC) -o public02 public02.o calendar.o
+
+public02.o: event.h calendar.h
+	$(CC) $(CFLAGS) -c public02.c
+
+public03: public03.o calendar.o
+	$(CC) -o public03 public03.o calendar.o
+
+public03.o: event.h calendar.h
+	$(CC) $(CFLAGS) -c public03.c
+
+public04: public04.o calendar.o
+	$(CC) -o public04 public04.o calendar.o
+
+public04.o: event.h calendar.h
+	$(CC) $(CFLAGS) -c public04.c
+
+public05: public05.o calendar.o
+	$(CC) -o public05 public05.o calendar.o
+
+public05.o: event.h calendar.h
+	$(CC) $(CFLAGS) -c public05.c
+
+public06: public06.o calendar.o
+	$(CC) -o public06 public06.o calendar.o
+
+public06.o: event.h calendar.h
+	$(CC) $(CFLAGS) -c public06.c
+
+clean:
+	rm -f *.o $(PROGS)
+
+
+
