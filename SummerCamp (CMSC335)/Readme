@@ -1,0 +1,9 @@
+Summer Camp App
+
+
+Objectives
+To practice MongoDB and MongoDB access from Node.js.
+
+
+Description:
+Implement an app called SummerCamp that allow users to submit an application for a summer camp. You will define a server (using Node.js) that will allow users to submit information and retrieve that information form a MongoDB database. 
