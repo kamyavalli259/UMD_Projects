@@ -7,6 +7,7 @@ This project is a Recipe Finder application built with Node.js, Express, and Mon
 
 ##node_modules
 For the project to run in the terminal run this command
+
 npm i axios dotenv ejs express mongodb
 
 
