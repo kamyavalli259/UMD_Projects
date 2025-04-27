@@ -1,0 +1,41 @@
+PhotoViewer
+
+Overview
+For this project you will implement a photo viewer that allows you to look at 
+photos available in a folder or specified via a JSON file.
+
+
+PhotoViewer.html - This is the main page of the application.
+code.js - This file includes all the JavaScript.
+style.css - This file includes all the css.
+umcp - Folder with images.
+
+
+
+Specifications/Requirements: 
+
+Loading Images from Local Folder
+
+When the "Load Photos" button is selected, photos in the range defined by the "Start Photo Number" and "End Photo Number" can be displayed. Your code should read the folder name, common name, start photo number, and end photo number. Based on the previous information, your code can create an array with the names of the photos that belong to the specified range. Each photo's name consists of the folder name, followed by the common name, the photo's number, and the ".jpg" extension. You can assume only .jpg files will be provided. Notice you don't need to add "/" (it is assumed the folder name will provide it).
+After loading data, the message "Photo Viewer System" should be displayed in a <div> that is in the "Status" fieldset area. This message should be displayed in red color.
+The first photo in the range is displayed when the "First Photo" button is clicked on.
+The last photo in the range is displayed when the "Last Photo" button is clicked on.
+Clicking on the "Next Photo" button displays the next photo. If the last photo in the range is being displayed, selecting the "Next Photo" button will display the first photo.
+Clicking on the "Previous Photo" button displays the previous photo. If the first photo in the range is being displayed, selecting the "Previous Photo" will display the last photo.
+Selecting the "SlideShow" button creates an animation were photos in the specified range are displayed, continuously. The photos will be displayed in the same order defined by the range. For example, if the range is 4 and 6 (assuming an umcp/ folder and a common name of college) the images umcp/college4.jpg, umcp/college5.jpg, umcp/college6.jpg will be continuously displayed in that order.
+Selecting the "RandomSlideShow" button creates an animation were photos in the specified range are displayed, randomly. Any random approach is fine and you don't have to worry if the same photo is displayed twice in a row. Ideally all photos in the range should eventually appear, but if not, that is fine. For example, selecting a random value in the range and displaying the photo associated with that value is fine.
+Selecting the "StopSlideShow" button stops the current animation that is in progress.
+Clicking on the displayed image is equivalent to clicking on the "Next Photo" button (the next image should be displayed when you click on the image currently displayed).
+The name (folder, common name, number, .jpg) of the photo currently being displayed should be rendered in a disabled text field that is in the "Status" fieldset area. The text "Photo Being Displayed: " should precede the disabled text field. The name of the photo should be displayed for iterations (e.g., clicking on the "Next Photo" button) and for slide shows.
+After reading the start and end photo numbers, your code must check that the end number is larger than or equal to the start number. If that is not the case, the message "Error: Invalid Range" should be display in a <div> that is located in the "Status" fieldset area. This message should be displayed in red color. You can assume we will always provide numbers in the "Start Photo Number" and the "End Photo Number" text fields.
+Iterating (e.g., selecting "Next Photo") or starting a slide show without first loading data is considered an error and the message "Error: you must load data first" should be displayed in the <div> that is in the "Status" fieldset area. This message should be displayed in red color.
+The image "InitialImage.jpg" will be displayed when the page is initially loaded. The name of this image should appear in the disabled text field.
+The speed of the slide show animations is one second.
+
+Loading Images Using a JSON File
+
+The source of photos can be a JSON file that has the format the following example file illustrates http://www.cs.umd.edu/~nelson/classes/resources/cmsc335/images/imagesSet1.json
+The JSON file has an array with images information. We will use the "imageURL" property to initialize the array used by the photoviewer.
+We will not use the "description" property.
+You can assume the JSON file has valid data (i.e., images exist).
+The "Load JSON" button will initialize the array of photos to view.
