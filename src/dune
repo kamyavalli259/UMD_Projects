@@ -1,7 +1,0 @@
-(library
- (name lcc)
- (modules eval lexer lccTypes parser)
- (libraries re))
-(env
-  (dev
-    (flags (:standard -w -A))))
