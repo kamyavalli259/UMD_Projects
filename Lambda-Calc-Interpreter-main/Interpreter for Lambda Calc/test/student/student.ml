@@ -1,0 +1,10 @@
+let () = 
+  let input = "not false" in
+  let engl_tokens = lex_engl input in
+  let engl_ast = parse_engl engl_tokens in
+  let lambda_expr_str = convert engl_ast in
+  let lambda_tokens = lex_lambda lambda_expr_str in
+  let lambda_ast = parse_lambda lambda_tokens in
+  let reduced_ast = reduce lambda_ast in
+  let result = readable reduced_ast in
+  assert (result = "true")
