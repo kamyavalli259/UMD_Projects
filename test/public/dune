@@ -1,6 +1,0 @@
-(tests
-  (names public)
-  (libraries lcc oUnit))
-(env
- (dev
-    (flags (:standard -w -A))))
